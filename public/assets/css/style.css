@@ -1,7 +1,8 @@
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: #e4caa8;
+  
 }
 
 .label {
@@ -16,4 +17,13 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+
+.hamIcon {
+  color: #d0975e;
+  font-size: .8em;
+}
+
+h1 {
+  text-align: center;
 }

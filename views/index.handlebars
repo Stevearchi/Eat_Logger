@@ -1,32 +1,54 @@
-<h1>Hamburgers!</h1>
+<h1><span class="fas fa-hamburger hamIcon">&nbsp;</span>{{!-- Hamburger icon --}}
+  <span class="fas fa-hamburger hamIcon">&nbsp;</span>
+  <span class="fas fa-hamburger hamIcon"></span> Hamburgers! <span class="fas fa-hamburger hamIcon">&nbsp;</span>
+  <span class="fas fa-hamburger hamIcon">&nbsp;</span>
+  <span class="fas fa-hamburger hamIcon"></span></h1>
+<br />
 
-<h2>Burgers on the Menu</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
 
-<ul>
-  {{#each hamburgers}}
-    {{#unless eaten}}
-      {{> hamburgers/hamburger-block eaten=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
+      <h2>Burgers on the Menu</h2>
 
-<h2>Burgers that are in your tummy!</h2>
+      <ul>
+        {{#each hamburgers}}
+        {{#unless eaten}}
+        {{> hamburgers/hamburger-block eaten=false}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-6">
 
-<ul>
-  {{#each hamburgers}}
-    {{#if eaten}}
-      {{> hamburgers/hamburger-block eaten=true}}
-    {{/if}}
-  {{/each}}
-</ul>
+      <h2>Burgers in your tummy!</h2>
 
-<h2>Add a hamburger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+      <ul>
+        {{#each hamburgers}}
+        {{#if eaten}}
+        {{> hamburgers/hamburger-block eaten=true}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
   </div>
+  <br />
+  <div class='row'>
+    <div class='col-md-6'>
 
-  <button type="submit">Add hamburger</button>
-</form>
+      <h2>Add a hamburger</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name">
+        </div>
+
+        <button type="submit">Add hamburger</button>
+      </form>
+    </div>
+    <div class='col-md-6'>
+      <img src="/assets/images/hate-burger.png" />
+    </div>
+  </div>
+</div>
